@@ -27,8 +27,8 @@ const formMiddleWare = (req, res, next) => {
         }
 
         // file[] and id[] fields required
-        fields.id = [].concat(fields.id || []);
-        files.file = [].concat(files.file || []);
+        fields.id = [].concat(fields.id || fields["url[]"] || []);
+        files.file = [].concat(files["file[]"] || []);
 
         if (files.file.length === 0) {
             return res.json({ error: "No files uploaded." });

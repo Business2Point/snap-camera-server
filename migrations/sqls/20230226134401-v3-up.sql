@@ -8,6 +8,9 @@ ALTER TABLE `unlocks` MODIFY COLUMN `mirrored` tinyint(1) unsigned NOT NULL DEFA
 ALTER TABLE `lenses` ADD COLUMN `web_import` tinyint(1) unsigned NOT NULL DEFAULT 0;
 ALTER TABLE `unlocks` ADD COLUMN `web_import` tinyint(1) unsigned NOT NULL DEFAULT 0;
 
+ALTER TABLE `lenses` ADD COLUMN `custom_import` tinyint(1) unsigned NOT NULL DEFAULT 0;
+ALTER TABLE `unlocks` ADD COLUMN `custom_import` tinyint(1) unsigned NOT NULL DEFAULT 0;
+
 ALTER TABLE `lenses` MODIFY COLUMN `lens_name` varchar(64) COLLATE 'utf8mb4_bin' NOT NULL;
 
 ALTER TABLE `lenses` MODIFY COLUMN `unlockable_id` varchar(16) NOT NULL;
